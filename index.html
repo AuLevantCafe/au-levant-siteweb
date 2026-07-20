@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Au Levant - Bar Bistrot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="#" class="logo">Au Levant</a>
+        <nav>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li><a href="Reservation.html">Réservation</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Bar · Bistrot</span>
+        <h1>Au Levant</h1>
+        <p>
+          Cuisine méditerranéenne généreuse et cocktails de saison au cœur de
+          Paris.
+        </p>
+        <div class="hero-buttons">
+          <a href="Reservation.html" class="btn btn-primary"
+            >Réserver une table</a
+          >
+          <a href="Menu.html" class="btn btn-secondary">Voir le menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="presentation" id="presentation">
+      <div class="presentation-text">
+        <span class="surtitre">L’esprit du lieu</span>
+        <h2>Saveurs méditerranéennes au cœur de Paris</h2>
+        <p>
+          Au Levant est un restaurant-bar où la gastronomie française rencontre
+          les inspirations méditerranéennes. Ici, les produits sont de saison et
+          les recettes soignées, et s’invitent dans une cuisine généreuse et
+          conviviale, pensée pour être partagée.
+        </p>
+        <p>
+          Un lieu vivant et chaleureux, propice aux moments simples et
+          authentiques, avec un bar et une terrasse en plein cœur de Paris.
+        </p>
+      </div>
+      <div class="presentation-img">
+        <img
+          src="Images/tartare image terasse.jpg"
+          alt="Assiette de tartare de bœuf avec salade, frites maison et verre de vin."
+        />
+      </div>
+    </section>
+
+    <section class="galerie" id="menu-section">
+      <div class="galerie-header">
+        <span class="surtitre">L'ambiance</span>
+        <h2>Notre univers en image</h2>
+      </div>
+      <div class="galerie-grid">
+        <figure>
+          <img
+            src="Images/Burrata.jpg"
+            alt="Assiette de burrata crémeuse accompagnée de tomates cerises fraîches"
+          />
+        </figure>
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=80"
+            alt="Préparation culinaire, légumes coupés à la main"
+          />
+        </figure>
+        <figure>
+          <img
+            src="Images/pain perdu.jpg"
+            alt="Pain perdu servi avec une boule de glace au restaurant Au Levant."
+          />
+          />
+        </figure>
+        <figure>
+          <img
+            src="Images/Boisson terassejpg.jpg"
+            alt="Table de terrasse avec des verres de vin au restaurant Au Levant."
+          />
+        </figure>
+        <figure>
+          <img
+            src="Images/Plat Au Levant.jpg"
+            alt="Assiette de poisson avec salade fraîche."
+          />
+        </figure>
+        <figure>
+          <img
+            src="Images/ambiance du restaurant.jpg"
+            alt="Ambiance du restaurant Au Levant avec terrasse et salle intérieure."
+          />
+        </figure>
+      </div>
+    </section>
+
+    <footer id="reservation">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">Au Levant</div>
+          <p>
+            Bar bistrot méditerranéen : cuisine de saison, cocktails et bons
+            moments partagés.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Infos pratiques</h3>
+          <a
+            href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.48.8460693359375_2.3769359588623047__Au%2520Levant_&mode=d&cp=48.846069%7E2.376936&lvl=16&style=r"
+            target="_blank"
+            rel="noopener"
+            >36 Boulevard Diderot, 75012 Paris</a
+          >
+          <p>Ouvert tous les jours de la semaine<br />de 07h à 02h</p>
+          <a href="tel:+33180064561">01 80 06 45 61</a>
+        </div>
+        <div class="footer-col">
+          <h3>Suivez-nous</h3>
+          <a
+            href="https://www.instagram.com/aulevantcafe/"
+            target="_blank"
+            rel="noopener"
+            >Instagram</a
+          >
+          <a href="mailto:contact@aulevant.fr">contact@aulevant.fr</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Au Levant - Tous droits réservés</div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navElement = document.querySelector("nav");
+
+      navToggle.addEventListener("click", () => {
+        navElement.classList.toggle("nav-open");
+        navToggle.classList.toggle("is-active");
+      });
+
+      navElement.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navElement.classList.remove("nav-open");
+          navToggle.classList.remove("is-active");
+        });
+      });
+    </script>
+  </body>
+</html>
