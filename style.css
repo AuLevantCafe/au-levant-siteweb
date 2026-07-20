@@ -1084,6 +1084,33 @@ a:focus-visible, button:focus-visible {
   .menu-photo-banner { aspect-ratio: 16/6; }
 }
 
+/* Nouvelle règle pour l'ordre mobile des formules */
+@media (max-width: 860px) {
+  #formules .menu-section-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #formules .menu-grid-formules {
+    display: contents;
+  }
+
+  #formules .formule-card:first-child {
+    order: 1;
+  }
+
+  #formules .formule-link {
+    order: 2;
+    align-self: center;
+    margin-top: 30px;
+  }
+
+  #formules .formule-card:nth-child(2) {
+    order: 3;
+    margin-top: 30px;
+  }
+}
+
 /* Accessibilité : focus visible */
 a:focus-visible, button:focus-visible {
   outline: 2px solid var(--orange-grise);
